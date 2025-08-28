@@ -1,10 +1,18 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+// main.jsx (Vite) OR index.js (CRA)
+import React from "react"
+import ReactDOM from "react-dom/client"
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
+import App from "./App"
+import "./index.css" // Tailwind entry
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+// Create a new QueryClient instance
+const queryClient = new QueryClient()
+
+// Mount React app
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <QueryClientProvider client={queryClient}>
+      <App />
+    </QueryClientProvider>
+  </React.StrictMode>
 )
