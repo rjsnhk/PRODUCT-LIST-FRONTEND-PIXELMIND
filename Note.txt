@@ -1,0 +1,39 @@
+// Frontend Developer Assignment
+Build a responsive e-commerce product listing page in React with search, filtering, product details, and an optional shopping cart.
+ Key Features
+Product Display:
+Show products in a grid (image, name, price, description).
+Data fetched using React Query.
+Search & Filter:
+Search: Filter products by their name. (Note: This is done on the client-side after fetching products, as the API doesn't support direct name search).
+Filter: Filter products by category.
+Global State: Search and filter states are managed using Zustand.
+Product Details:
+Clicking a product opens a full-detail modal.
+Modal should be responsive and have a close button.
+Add Product Form (Mock):
+A form to "add" new products (Title, Price, Description, Category, Image URL).
+Uses React Hook Form for handling and Zod for validation.
+Important: This form simulates submission; it does not send data to a backend.
+Optional: Shopping Cart:
+Ability to add products to a cart.
+Cart data managed by Zustand.
+A floating icon displays the number of items in the cart.
+Tech Stack
+React Framework: React.js
+Styling: Tailwind CSS
+Data Fetching: React Query
+State Management: Zustand
+Form Handling & Validation: React Hook Form + Zod
+Fake Store API Endpoints
+All product data for display, filtering, and detail modals will come from the Fake Store API.
+Get All Products: https://fakestoreapi.com/products
+Get All Categories: https://fakestoreapi.com/products/categories
+Get Products by Category: https://fakestoreapi.com/products/category/{category_name} (Replace {category_name} with an actual category, e.g., electronics, jewelery, men's clothing, women's clothing).
+Get Single Product Details: https://fakestoreapi.com/products/{id} (Replace {id} with the product's ID, e.g., 1, 2).
+What to Deliver
+
+A public GitHub repository with clear commit history.
+A README.md file explaining the project, setup steps, and a link to the live demo.
+A live, hosted demo (e.g., Netlify, Vercel) that is fully responsive across devices.
+
